@@ -1,0 +1,738 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Karla:ital,wght@0,200..800;1,200..800&family=Lobster&family=Nabla&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html {
+    scroll-margin: 0.7rem;
+    scroll-behavior: smooth;
+}
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+img {
+    width:200px;
+}
+.Header {
+    background-color:#181818;
+    width:100%;
+}
+body {
+    background-color:#c4dfe6;
+}
+.portfolio {
+    height:100%;
+}
+.Header {
+    max-height:150px;
+    min-height:120px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    border-radius:5px;
+    position:relative;
+}
+.my-Name {
+    color:#ffffff;
+    font-size:2.5rem;
+    font-family:"Lobster",serif,arial;
+    margin-left:2rem;
+    cursor:pointer;
+}
+.lname {
+    color:#ff0000;
+}
+.nav-div {
+    margin-right:5%;
+    min-height:50%;
+    width:45%;
+}
+.nav-div li {
+    margin-left: 1.5rem;
+    padding: 1rem;
+    border:1px solid green;
+    background-color: #252525;
+    border-radius:7px;
+    transition:0.5s;
+}
+.nav-div li:hover {
+    background-color:#414141;
+    border:1px solid white;
+    color:white;
+    cursor:pointer;
+}
+.nav-div ul {
+    list-style-type: none;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-div a {
+    text-decoration:none;
+    color:white;
+    display:block;
+    font-size:1.2rem;
+    font-family: sans-serif;
+}
+#closer {
+    cursor:pointer;
+}
+
+#drop {
+    padding:0;
+    margin-right:10px;
+    cursor:pointer;
+    display:block;
+}
+#drop img {
+    width:50px;
+    height:50px;   
+}
+.drop-menu {
+    position:absolute;
+    top:8rem;
+    right:2rem;
+    border:4px solid black;
+    padding:1.3rem;
+    z-index: 2;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-radius:10px;
+    display:none;
+}
+.drop-menu ul {
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:2rem;
+}
+.drop-menu li{
+    width:100%;
+    list-style:none;
+    text-decoration:none;
+    transition:0.5s;
+}
+.drop-menu li:nth-child(2):hover,
+.drop-menu li:nth-child(3):hover,
+.drop-menu li:nth-child(4):hover{
+   text-decoration: underline;
+   transform:scale(1.1,1.1);
+
+}
+.drop-menu a {
+    text-decoration:none;
+    color:black;
+    font-size:1.5rem;
+    display:block;
+}
+.drop-menu img {
+    width:25px;
+    height:25px;
+    position:absolute;
+    right:0;
+    top:0;
+    padding:0;
+}
+.up-arrow {
+    position:fixed;
+    bottom:2%;
+    right:0;
+    cursor:pointer;
+}
+.up-arrow img {
+    max-width:70px;
+    max-height:50px;
+    border-radius:35px;
+}
+#theme {
+    background-color: white;
+    background-position: center;
+    clip-path:circle();
+    overflow: hidden;
+}
+#theme img{
+    width:20px;
+    height:20px;
+}
+span img {
+    width:40px;
+    height:40px;
+}
+.img-contaioner {
+    width:230px;
+    min-height:370px;
+    overflow: hidden;
+}
+.img-contaioner img {
+    width:100%;
+    height:100%;
+}
+.about-myself {
+    display: grid;
+    max-height:700px;
+    width:60%;
+    margin: 2rem auto;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr repeat(3,2fr) 1fr;
+    grid-gap:1rem;
+    background-color:#66a5ad;/*#a39f9f*/
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding:1.2rem;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius:15px;
+    position:relative;
+    transition: background-color 1s ease;
+}
+.my-title {
+    grid-column:1/3;
+    margin:0 auto;
+    padding:2%;
+    text-decoration: underline;
+    font-family:sans-serif;
+}
+.img-contaioner {
+    background-color: #ff0000;
+    grid-column:1/2;
+    grid-row:2/4;
+    border-radius:10px;
+    border:5px solid black;
+}
+.all-the-stuff {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    grid-column:2/3;
+    grid-row:3/5;
+}
+.all-the-stuff p {
+    display:inline-block;
+    line-height:1.5rem;
+}
+.PersonalInfo:hover {
+    text-decoration:underline;
+}
+.address {
+    margin-top:7px;
+}
+.address {
+    grid-column: 1/3;
+    grid-row:5/6;
+    margin-right:1.4rem;
+    position:absolute;
+    width:100%;
+    bottom:0;
+}
+.address p {
+    display:inline-block;
+}
+.first-para {
+    font-style: normal;
+    font-size:larger;
+    font-weight: bold;
+}
+
+.address-location {
+    text-align:center;
+    min-height:30px;
+}
+
+.bio h1 {
+    text-align: center;
+}
+.bio {
+    width:90%;
+    margin:2rem auto;
+    display:grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-auto-rows: minmax(fit-content,auto);
+    grid-gap:2%;
+}
+.bio-title {
+    grid-column: 1/3;
+    margin:2rem auto;
+    height:fit-content;
+    padding:2%;
+    padding-bottom: 0;
+    margin-bottom:0;
+    text-align:center;
+}
+.bio-paragraph {
+    grid-column:2/3;
+    grid-row:2/3;
+    padding:3rem;
+    font-size:medium;
+    line-height:1.5rem;
+    border-radius:10px;
+    background-color: #66a5ad;/*#a39f9f*/
+    font-family: sans-serif;
+    font-weight: lighter;
+    max-height:fit-content;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.dev-img img{
+    width:80%;
+    height:30%;
+    border-radius:50px;
+    overflow:hidden;
+}
+.img-con {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.divider {
+    width:3%;
+    max-height:70%;
+    background-color: black;
+    margin-left:-2%;
+}
+
+.edu-head {
+    text-align:center;
+    margin-top:15rem;
+}
+.education {
+    min-width:90%;
+    max-width:95%;
+    margin:1.4rem auto 0.5em auto;
+}
+#prime-header {
+    text-align:center;
+    text-wrap: nowrap;
+}
+#prime-paragraph {
+    padding:1.4rem;
+}
+.btns {
+    max-width:15%;
+    height:fit-content;
+    padding:0.2rem;
+    margin: 0.5rem auto 1.5rem auto;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btns >* {
+    border:none;
+    border-radius:7px;
+    background-color: red;
+    color:white;
+    min-width:70px;
+    min-height:50px;
+    cursor:pointer;
+    transition:0.5s;
+    font-size:1rem;
+}
+.btns >*:hover {
+    background:white;
+    color:red;
+    text-decoration: underline;
+    text-decoration-color: red;
+    box-shadow: rgba(255, 0, 0,1) 0px 8px 24px, red 0px 16px 56px, red 0px 24px 80px;
+}
+.high-school,.higher-education {
+    display:none;
+}
+.right-side{   
+    background-color:#66a5ad;/*#aaaaaa*/
+}
+.left-side{
+    padding:2rem;
+    background-color:#66a5ad;/*#a39f9f*/
+}
+.left-side img {
+    display:block;
+    max-width:120px;
+}
+.footer{
+    background-color:#414141;/*#dadad4*/
+    color:whitesmoke;
+}
+
+.socialMedia-Accounts {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:2rem;
+    min-height:150px;
+}
+.edu-detail {
+    display:flex;
+    justify-content: space-between;
+    width:70%;
+    margin:3px auto;
+    gap:1.5rem;
+}
+.right-side p {
+    height:100%;
+}
+.high-school {
+    display:none;
+}
+.higher-education {
+    display:none;
+}
+.social_media {
+    cursor:pointer;
+}
+@keyframes shift {
+    from{transform:translateX(0)}
+    to {transform:translate(-100px,200px)}
+}
+@keyframes shiftImG {
+    from{transform:translateX(0)}
+    to {transform:translateX(200px)}
+}
+@keyframes down {
+    from{transfor:translateY(0)}
+    to{transform:translateY(20px)}
+}
+@keyframes left-right {
+    from{transform:translateX(-1000px)}
+    to{transform:translateX(0px)}
+} 
+@keyframes right-left {
+    from{transform:translateX(500px)}
+    to{transform:translateX(0px)}
+}
+@keyframes Left-Right {
+    from{transform:translateX(-200px)}
+    to{transform:translateX(0)}
+}
+@keyframes Down-Up {
+    from{transform:translateY(200px)}
+    to{transform:translateY(0)}
+}
+@media screen and (min-width:1281px){
+.drop-menu,#drop {
+    display:none;
+}
+.address-location {
+    animation-name: down;
+    animation-duration:1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: linear;
+}
+.L-r {
+    animation:left-right 1s linear 1 alternate;
+    animation-iteration-count: 1;
+}
+.R-l {
+    animation:right-left 1s linear 1 alternate;
+    animation-iteration-count: 1; 
+}
+.shiftLR {
+    animation-name:shift;
+    animation-duration: 2s;
+    animation-timing-function:ease-in;
+    animation-delay:1;
+    animation-fill-mode: forwards;
+    animation-delay:0;
+    animation-iteration-count: 1; 
+}
+.shiftImm {
+    animation-name: shiftImG;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+}
+.shiftDU {
+    animation-name:Down-Up;
+    animation-duration: 0.7s;
+    animation-timing-function:ease-in;
+    animation-delay:1;
+    animation-fill-mode: forwards;
+    animation-delay:0;
+    animation-iteration-count: 1; 
+}
+}
+@media screen and (max-width:1280px) {
+    .drop-menu,#drop{
+    display:none;
+    }
+    .btns >* {
+        margin-right: 1.2rem;
+    }
+}
+@media  screen and (max-width:999px){
+    .about-myself {
+        width:95%;
+    }
+    .Header {
+        max-height:150px;
+        min-height:120px;
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        border-radius:5px;
+        position:relative;
+    }
+    .my-Name {
+        position:absolute;
+        left:0;
+    }
+    .nav-div {
+        width:40%;
+        margin-left:auto;
+        margin-right:6rem;
+    }
+    .nav-div ul {
+        justify-content:center;
+        gap:0.5rem;
+    }
+    nav-div li {
+        margin-left:0;
+    }
+    .bio {
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        gap:1rem;
+    }
+    .bio-paragraph {
+        flex-grow:1;
+    }
+    .divider {
+        display: none;
+    }
+    .dev-img img{
+        width:300px;
+        height:300px;
+        overflow:hidden;
+    }
+    .dev-img .img-con {
+        clip-path: circle();
+    }
+    .education {
+        min-width:100%;
+        margin:0.7rem 0;
+    }
+    .edu-detail {
+        width:95%;
+        margin:0 auto;
+        grid-gap:1rem;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+    .left-side {
+       display:flex;
+       justify-content: center;
+       gap:0.7rem;
+       align-items:center;
+       height:fit-content;
+       border-radius:10px;
+    }
+    .right-side {
+        grid-row: 2/3;
+        margin:0 auto;
+        padding:2rem;
+        border-radius:10px;
+    }
+    .hidden-item {
+        display:none;
+    }
+    .btns >* {
+        margin-right: 1.2rem;
+    }
+    #drop {
+            display:none;
+    }
+    #theme {
+        min-width:60px;
+        clip-path: circle();
+    }
+    #theme img{
+        width:30px;
+        height:30px;
+    }
+}
+@media  screen and (max-width:720px){
+
+    .about-myself {
+        width:100%;
+    }
+    .Header {
+        width:100%;
+    }
+    .nav-div {
+        display: none;
+    }
+    .bio {
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        gap:1rem;
+        margin-top:7rem;
+    }
+    .bio-paragraph {
+        flex-grow:1;
+    }
+    .dev-img img{
+        width:150px;
+        height:150px;
+        border-radius:75px;
+    }
+    .edu-head{
+        margin-top:6rem;
+        text-decoration: underline;
+    }
+    #prime-paragraph {
+        margin-top:auto;
+        margin-bottom:auto;
+    }
+    .education {
+        min-width:100%;
+        margin:0.7rem 0;
+    }
+    .edu-detail {
+        width:95%;
+        margin:0 auto;
+        grid-gap:1rem;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+    .left-side {
+       display:flex;
+       justify-content: center;
+       gap:0.7rem;
+       align-items:center;
+       height:fit-content;
+       border-radius:10px;
+    }
+    .right-side {
+        grid-row: 2/3;
+        margin:0 auto;
+        padding:2rem;
+        border-radius:10px;
+    }
+    .hidden-item {
+        display:none;
+    }
+    .btns >* {
+        margin-right: 1.2rem;
+    }
+    .S-ENG {
+        display:none;
+    }
+    #drop {
+        margin-left:auto;
+        margin-right:10px;
+        display: block;
+    }
+    .drop-menu {
+        text-align: center;
+        width:250px;
+    }
+}
+@media  screen and (max-width:545px) {
+    .about-myself {
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        gap:1.2rem;
+    }
+    .about-myself img{
+        width:150px;
+        height:150px;
+    }
+    .about-myself p {
+        font-size:0.8rem;
+    }
+    .img-contaioner {
+        width:fit-content;
+        min-height:fit-content;
+        max-height:400px;
+        overflow:hidden;
+        background:none;
+        margin:0.3rem auto;
+    }
+    .nav-div {
+        display: none;
+    }
+    .address-location {
+        margin-top:10px;
+    }
+    .bio {
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        gap:1rem;
+    }
+    .bio-paragraph {
+        flex-grow:1;
+    }
+    .divider {
+        display: none;
+    }
+    .dev-img img{
+        width:150px;
+        height:150px;
+        border-radius:75px;
+    }
+    .education {
+        min-width:100%;
+        margin:1.2rem 0;
+    }
+    .edu-detail {
+        width:100%;
+        margin:0;
+        grid-gap:0;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+    .left-side {
+       display:flex;
+       justify-content: center;
+       gap:0.7rem;
+       align-items:center;
+       height:fit-content;
+    }
+    .right-side {
+        grid-row: 2/3;
+        margin:0 auto;
+        padding:2rem;
+    }
+    .hidden-item {
+        display:none;
+    }
+    .btns >* {
+        margin-right: 1.2rem;
+    }
+    #first ,.social{
+        display: none;
+    }
+   .socialMedia-Accounts {
+    min-height:100px;
+   } 
+   .drop-menu {
+    width:100%;
+    right:0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   }
+   .drop-menu a{
+    color:black;
+    text-align: center;
+   }
+   .drop-menu ul{
+    width:100%;
+    }
+    #drop {
+        display:block;
+    }
+    .img-contaioner img {
+        min-width:150px;
+        min-height:150px;
+    }
+}
